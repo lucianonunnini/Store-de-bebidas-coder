@@ -18,8 +18,8 @@ body{
 
 #bebidas_can div {
     background-color: rgb(240, 201, 154);
-    border: 10 px solid gray;
-    border-radius: 15 px;
-    margin: 30px
-
+    border: 10px solid gray;
+    border-radius: 15px;
+    margin: 30px;
+    text-align: center
 }

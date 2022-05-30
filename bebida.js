@@ -15,10 +15,10 @@ class bebida {
 
     getTitle() {
     
-        return this.tipo + "#"+ this.id
+        return this.tipo + " Codigo#"+ this.id
     }
 
-    setName(newName) {
+    setName(newTipo) {
     
         this.tipo = newTipo
     }

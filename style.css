@@ -1,0 +1,25 @@
+body{
+    margin: 30px;
+    background-color: whitesmoke;
+}
+
+#bebidas_can div img {
+    width: 50%;
+    margin: 50px;
+
+}
+
+#bebidas_can{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+#bebidas_can div {
+    background-color: rgb(240, 201, 154);
+    border: 10 px solid gray;
+    border-radius: 15 px;
+    margin: 30px
+
+}

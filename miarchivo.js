@@ -69,3 +69,18 @@ function crear_caja_bebida(bebidas) {
     })   
 
 }
+
+//event.target para gaseosa jugo y cerveza
+let subitemList = document.getElementById("subitemList");
+
+subitemList.addEventListener('click', (event) => {
+    //Objeto de evento
+    if(event.target.className === 'item2'){
+        if(event.target.children[0].style.display === "block"){
+            event.target.children[0].style.display = "none";
+        } else {
+            event.target.children[0].style.display = "block";
+        }
+    }
+})
+

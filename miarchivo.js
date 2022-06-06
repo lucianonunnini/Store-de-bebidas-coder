@@ -79,4 +79,48 @@ subitemList.addEventListener("click", (event) => {
       event.target.children[0].style.display = "block";
     }
   }
-});
+})
+
+
+//creo una funcion para guardar algo en el LOCALSTORAGE
+
+//guardar_localstorage()
+function guardar_localstorage(){
+    let consumicion = {
+        nombre: 'cerveza',
+        tipo: 'industrial',
+        precio: '100',
+
+
+    }
+
+let nombre = 'cerveza artesanal'
+    localStorage.setItem('nombre', JSON.stringify(nombre
+    ))
+    localStorage.setItem("consumicion", JSON.stringify(consumicion))
+
+}
+
+
+//obtencion de la informacion del localstorage
+
+obtener_localstorage()
+function obtener_localstorage() {
+    
+    if (localStorage.getItem("nombre")) {
+        
+        //existe la bebida en el localstorage
+
+         let nombre = localStorage.getItem("nombre");
+
+         //recupero el objeto
+         let consumicion = JSON.parse(localStorage.getItem("consumicion"));
+         console.log(nombre);
+        console.log(consumicion);
+        
+    } else {
+        console.log ("NO existe la bebida en el localstorage")
+    }
+
+   
+}

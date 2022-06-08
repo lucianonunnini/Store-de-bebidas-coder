@@ -84,7 +84,7 @@ subitemList.addEventListener("click", (event) => {
 
 //creo una funcion para guardar algo en el LOCALSTORAGE
 
-//guardar_localstorage()
+guardar_localstorage()
 function guardar_localstorage(){
     let consumicion = {
         nombre: 'cerveza',
@@ -94,9 +94,14 @@ function guardar_localstorage(){
 
     }
 
+
+    
+    //grabar cerveza artesanal en el localstorage
 let nombre = 'cerveza artesanal'
     localStorage.setItem('nombre', JSON.stringify(nombre
     ))
+
+    //guardo objeto consumicion en el localstorage 
     localStorage.setItem("consumicion", JSON.stringify(consumicion))
 
 }
@@ -106,21 +111,30 @@ let nombre = 'cerveza artesanal'
 
 obtener_localstorage()
 function obtener_localstorage() {
-    
-    if (localStorage.getItem("nombre")) {
-        
-        //existe la bebida en el localstorage
+  //armo un if condicional para saber si existe el nombre en el localstorage
+  if (localStorage.getItem("nombre")) {
+    // si existe la bebida en el localstorage
 
-         let nombre = localStorage.getItem("nombre");
+      let nombre = localStorage.getItem("nombre");
+     
 
-         //recupero el objeto
-         let consumicion = JSON.parse(localStorage.getItem("consumicion"));
-         console.log(nombre);
-        console.log(consumicion);
-        
-    } else {
-        console.log ("NO existe la bebida en el localstorage")
-    }
+    //recupero el objeto consumicion para que me devuelva el objeto
+    let consumicion = JSON.parse(localStorage.getItem("consumicion"));
+    console.log(nombre);
+      console.log(consumicion);
+      
+  } else {
+    console.log("NO existe la bebida en el localstorage");
+  }
 
-   
+
 }
+
+
+  //Eliminar toda la informacion en el locasltorage
+
+  localStorage.clear()
+
+  //Eliminar un item del localstorage
+
+    localStorage.removeItem("nombre")

@@ -26,6 +26,8 @@ arreglo_bebida.push(bebida3);
 
 let bebidas_can = document.getElementById("bebidas_can");
 
+
+//se indentifica como i++ como operador ++ (sugar sintax)
 for (let i = 0; i < arreglo_bebida.length; i++) {
   let objeto_bebida = arreglo_bebida[i];
   crear_caja_bebida(objeto_bebida);
@@ -58,16 +60,21 @@ function crear_caja_bebida(bebidas) {
   cant.addEventListener("click", () => {
     bebidas_can.removeChild(cant);
     alert("Agregaste una bebida");
+    //se indentifica como contador++ como operador ++ (sugar sintax)
     contador++;
     input_cantidad.value = contador;
 
+
+      //optimizo el codigo de if contador con operador ternario
+      /*contador == arreglo_bebida.length ? alert ('Agregaste todas las bebidas'): alert ('Quedan bebidas disponibles')
+      */
     if (contador == arreglo_bebida.length) {
       alert("Agregaste todas las bebidas");
     }
   });
 }
 
-//event.target para al descripciones de gaseosa, jugo y cerveza
+//event.target para la descripciones de gaseosa, jugo y cerveza
 let subitemList = document.getElementById("subitemList");
 
 subitemList.addEventListener("click", (event) => {
@@ -130,8 +137,13 @@ function obtener_localstorage() {
 
 }
 
+// uso del operador logico or en el caso para recuperar el objeto consumicion
+let consumicion = JSON.parse (localStorage.getItem ('consumicion')) || [console.log ('NO existe la bebida en el localstorage')]
 
-  //Eliminar toda la informacion en el locasltorage
+
+ 
+
+//Eliminar toda la informacion en el locasltorage
 
   localStorage.clear()
 

@@ -16,13 +16,20 @@ let bebida1 = new bebida(1, "GASEOSAS", "/image/gaseosas.jpg");
 let bebida2 = new bebida(2, "JUGOS", "/image/jugo.png");
 let bebida3 = new bebida(3, "CERVEZAS", "/image/cervezaind.png");
 
-//DEFINO ARREGLO
+//se prueba realizar la Desestructuracion de arrays
 
+/* let ['bebida1','bebida2','bebida3'] = arreglo_bebida */
+
+//DEFINO ARREGLO
 let arreglo_bebida = new Array();
 
 arreglo_bebida.push(bebida1);
 arreglo_bebida.push(bebida2);
 arreglo_bebida.push(bebida3);
+
+
+// spread de array
+/* console.log(...arreglo_bebida) */
 
 let bebidas_can = document.getElementById("bebidas_can");
 

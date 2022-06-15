@@ -2,6 +2,9 @@
 //Se incorpora eventos varios para un store de bebidas.
 //En el mismo, se pretende mostrar como el usuario puede elegir una bebida determinada y como un contador acumula.
 //por ultimo al hacer click en la descripcion de un producto se muestran diferentes items que especifica al producto elegido
+
+//Se agregó la libreria sweet alert para modificar los alertas que se encuentran en el proyecto para que indique al usuario la bebida elegida
+
 //Alumno: Nunnini Luciano
 
 //defino la variable contador
@@ -66,7 +69,17 @@ function crear_caja_bebida(bebidas) {
 
   cant.addEventListener("click", () => {
     bebidas_can.removeChild(cant);
-    alert("Agregaste una bebida");
+      
+   Swal.fire({
+     icon: "succes",
+     title: "AGREGASTE LA BEBIDA",
+     text: "Muchas gracias!",
+     
+   });
+    
+    //alert("Agregaste una bebida");
+      
+
     //se indentifica como contador++ como operador ++ (sugar sintax)
     contador++;
     input_cantidad.value = contador;
@@ -76,7 +89,17 @@ function crear_caja_bebida(bebidas) {
       /*contador == arreglo_bebida.length ? alert ('Agregaste todas las bebidas'): alert ('Quedan bebidas disponibles')
       */
     if (contador == arreglo_bebida.length) {
-      alert("Agregaste todas las bebidas");
+      
+      Swal.fire({
+        position: "top-center",
+        icon: "success",
+        title: "Agregaste todas las bebidas",
+        showConfirmButton: false,
+        timer: 1800,
+      });
+      
+      
+        
     }
   });
 }

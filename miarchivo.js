@@ -4,7 +4,7 @@
 //por ultimo al hacer click en la descripcion de un producto se muestran diferentes items que especifica al producto elegido
 
 //Se agregó la libreria sweet alert para modificar los alertas que se encuentran en el proyecto para que indique al usuario la bebida elegida
-
+//se agregó fetch y un archivo .json de los productos
 //Alumno: Nunnini Luciano
 
 //defino la variable contador
@@ -18,6 +18,17 @@ input_cantidad.value = contador;
 let bebida1 = new bebida(1, "GASEOSAS", "/image/gaseosas.jpg");
 let bebida2 = new bebida(2, "JUGOS", "/image/jugo.png");
 let bebida3 = new bebida(3, "CERVEZAS", "/image/cervezaind.png");
+
+
+//creo un fecth para cargar API que cree con el JSON (data.json)
+
+
+  fetch('/data.json')
+    .then((res) => res.json())
+    .then((data) => {console.log (data)
+    })
+
+
 
 //se prueba realizar la Desestructuracion de arrays
 

@@ -1,0 +1,6 @@
+[
+  {"id": 1 , "nombre": "GASEOSAS", "imagen": "./image/gaseosas.jpg ", "precio": 150 },
+  {"id": 2 , "nombre": "JUGOS", "imagen": "./image/jugos.png " , "precio": 70 },
+  {"id": 3 , "nombre": "CERVEZAS", "imagen": "./image/cervezaind.png", "precio": 200 }
+  
+]
